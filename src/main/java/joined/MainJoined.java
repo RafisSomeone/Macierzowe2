@@ -52,9 +52,9 @@ class Calculator {
             List<Long> results = new ArrayList<>();
             int size = 0;
             for (int i = 0; i < 10; i++) {
-                long startTime = System.nanoTime();
+                long startTime = System.currentTimeMillis();
                 size = multiplicator.getResult().length;
-                long stopTime = System.nanoTime();
+                long stopTime = System.currentTimeMillis();
                 Long time = stopTime - startTime;
                 results.add(time);
             }
