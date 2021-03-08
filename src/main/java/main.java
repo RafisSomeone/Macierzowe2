@@ -2,13 +2,34 @@ import generators.MatrixGenerator;
 import multiplicators.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class main {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         calculator.run();
+    }
+
+    public static void print(double[][] matrix){
+        System.out.print("[");
+        for (int i = 0; i < matrix.length; i++){
+            System.out.print("[");
+            for (int j = 0; j < matrix[0].length; j++){
+                System.out.printf(String.format(Locale.US, "%.10f", matrix[i][j]));
+                if (j != matrix[0].length - 1){
+                    System.out.print(", ");
+                }
+            }
+            System.out.print("]");
+            if (i != matrix.length - 1){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+        System.out.println();
     }
 }
 
