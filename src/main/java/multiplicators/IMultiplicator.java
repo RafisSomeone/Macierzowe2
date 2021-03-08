@@ -2,8 +2,8 @@ package multiplicators;
 
 public abstract class IMultiplicator {
 
-    private double[][] matrix1;
-    private double[][] matrix2;
+    protected double[][] matrix1;
+    protected double[][] matrix2;
 
     public abstract double[][] getResult();
     public abstract String getDescription();

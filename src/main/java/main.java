@@ -46,7 +46,6 @@ class Calculator {
         }
     }
 
-
     public Long average(List<Long> results) {
         Long sum = 0L;
         if (!results.isEmpty()) {
