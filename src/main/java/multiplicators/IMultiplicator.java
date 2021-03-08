@@ -1,4 +1,6 @@
 package multiplicators;
 
-public class IMultiplicator {
+public interface IMultiplicator {
+    double[][] getResult();
+    String getDescription();
 }
