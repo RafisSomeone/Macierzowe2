@@ -20,6 +20,6 @@ public class KJIMultiplier extends IMultiplicator {
 
     @Override
     public String getDescription() {
-        return "KIJ";
+        return "KJI";
     }
 }

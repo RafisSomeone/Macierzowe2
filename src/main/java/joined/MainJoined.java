@@ -214,7 +214,7 @@ class KIJMultiplier extends IMultiplicator {
 
     @Override
     public String getDescription() {
-        return "KJI";
+        return "KIJ";
     }
 }
 
@@ -238,7 +238,7 @@ class KJIMultiplier extends IMultiplicator {
 
     @Override
     public String getDescription() {
-        return "KIJ";
+        return "KJI";
     }
 }
 
