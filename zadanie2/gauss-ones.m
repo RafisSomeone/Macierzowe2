@@ -1,6 +1,8 @@
-N = 10
+N = 6
 x = rand(N,N+1);
 x
+
+#x = [999, 998, 1997; 1000, 999, 1999]
 
 function matrix = perform_down_rows_subtraction(matrix, current_row)
   for j = current_row+1:rows(matrix)
@@ -28,10 +30,10 @@ function result = gauss_with_ones(x)
 end
 
 function matrix = perform_pivoting(matrix, i)
-  if (i < rows(i))#if it is last row, the pivot should not be performed 
+  if (i < rows(matrix))#if it is last row, the pivot should not be performed 
     down_rows_to_consider = matrix(i:rows(matrix), :);
     [_, max_abs_row_indeces] = max(abs(down_rows_to_consider));
-    row_to_swap = max_abs_row_indeces(i);
+    row_to_swap = max_abs_row_indeces(i) + i - 1;
     matrix([i row_to_swap], :) = matrix([row_to_swap i], :);
   endif
 end
@@ -63,9 +65,9 @@ end
 #Gaussa. Sam fakt tego, ze rozwiazania ukladu rownan za pomoca wbudowanej 
 #funkcji sa takie same, oznacza, ze wlasnosc macierzy wejsciowej nie zostala
 #zaburzona i macierz zostala dobrze przeksztalcona do macierzy o okreslonej wlasnosci
-x1 = gauss_without_ones(x);
-x2 = gauss_with_ones(x);
-x3 = gauss_pivoting(x);
+x1 = gauss_without_ones(x)
+x2 = gauss_with_ones(x)
+x3 = gauss_pivoting(x)
 [l, u] = LU_factorization(x);
 l * u;
 
