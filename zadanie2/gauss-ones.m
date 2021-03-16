@@ -10,7 +10,7 @@ function matrix = perform_down_rows_subtraction(matrix, current_row)
   endfor
 end
 
-#task 1
+#task 2
 function result = gauss_without_ones(x)
   result(:, :) = x(:, :);
   for i = 1:rows(result)
@@ -18,7 +18,7 @@ function result = gauss_without_ones(x)
   endfor
 end
 
-#task 2
+#task 1
 function result = gauss_with_ones(x)
   result(:, :) = x(:, :);
   for i = 1:rows(result)
